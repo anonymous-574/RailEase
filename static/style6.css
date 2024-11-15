@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(45deg,deeppink,crimson,firebrick,deeppink);
+    background-size: 400% 400%;
+    animation: color 8s ease-in-out infinite;
+    display: flex;
+    color: firebrick;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#detbox {
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 350px;
+    width: 450px;
+    color:azure;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -10px -10px 30px white;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 15px;
+}
+
+form {
+    position: relative;
+    top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px;
+}
+
+::placeholder{
+    color:white;
+}
+
+label{
+    align-self: justify;
+    color: white;
+    font-weight: bold;
+}
+
+select{
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color:white;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+option{
+    color: black;
+}
+input[type="text"],
+input[type="number"],input[type="datetime-local"],
+input[type="password"]{
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color:azure;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="datetime-local"]:focus,
+input[type="password"]:focus{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px #fff;
+}
+
+#pay-btn {
+    width: 300px;
+    padding: 12px;
+    margin: 10px;
+    align-self: center;
+    background-color: white;
+    color: grey;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pay-btn:hover{
+    color:black;
+}

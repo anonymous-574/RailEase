@@ -1,0 +1,97 @@
+body {
+    background: linear-gradient(45deg, #ab0909, #780050, #780016);
+    background-size: 400% 400%;
+    animation: color 5s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#logbox {
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 300px;
+    width: 350px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -10px -10px 30px white;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px #fff;
+}
+
+#login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: #780016;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#login-btn:hover {
+    background-color: #ffcccc;
+    color: #780016;
+}
+
+#submit {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
+#submit p {
+    margin: 0;
+    font-weight: bold;
+}
+#reg {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+#reg:hover {
+    color: #ffcccc;
+    text-decoration: underline;
+}

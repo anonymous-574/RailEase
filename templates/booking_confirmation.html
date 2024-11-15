@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style7.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div id="detbox">
+        {% if ticket %}
+        <h3>TICKET BOOKED SUCCESSFULLY !!</h3>
+        <div id="tno">
+            TICKET NUMBER : {{ ticket.Ticket_no }}
+        </div>
+        <div id="src">
+            SOURCE : {{ ticket.Train_no.source }}
+        </div>
+        <div id="destn">
+            DESTINATION : {{ ticket.Train_no.destination }}
+        </div>
+        <div id="depttime">
+            DEPARTURE TIME : {{ ticket.Train_no.Dtime }}
+        </div>
+        <div id="arvtime">
+            ARRIVAL TIME : {{ ticket.Train_no.Atime }}
+        </div>
+        <div id="dateofbooking">
+            DATE OF BOOKING : {{ date.date|date:"d-m-Y" }}
+        </div>
+        <!--
+        <div id="amt">
+            AMOUNT PAYED : 200
+        </div>
+        -->
+        <div id="status">
+            STATUS : {{ ticket.Status }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

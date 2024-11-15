@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static 'style4.css' %}>
+    <title>Document</title>
+</head>
+<body>
+    <div id="detbox">
+        <form action="#" method="POST">{% csrf_token %}
+            <div id="src">
+                Source : 
+                <label for="source">
+                    <input type="text" id="source" name="source" placeholder="Enter source">
+                </label>
+            </div>
+            <div id="dest">
+                Destination : 
+                <label for="destination">
+                    <input type="text" id="destination" name="destination" placeholder="Enter destination">
+                </label>
+            </div>
+            <div id="cls">
+                Class : 
+                <select name="Sclass" id="Sclass" placeholder="Select class of tickets">
+                    <option value="General">General</option>
+                    <option value="Sleeper">Sleeper (S)</option>
+                    <option value="AC">AC</option>
+                </select>
+            </div>
+            <div id="seats">
+                Number of seats : 
+                <label for="no_of_seats">
+                    <input type="number" id="no_of_seats" name="no_of_seats" placeholder="Enter number of seats">
+                </label>
+            </div>
+            <div id="dateoftravel">
+                Date : 
+                <label for="date">
+                    <input type="date" id="date" name="date" placeholder="Select date of travel">
+                </label>
+            </div>
+            <button type="submit" id="book-btn">Book</button>
+        </form>
+    </div>
+</body>
+</html>
