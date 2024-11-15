@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a6#mwb1(wh5@+i#q*f(-m*@(!_6ctes_j9x#!)%0jp$9%7c7*_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['train-booking.onrender.com']
+ALLOWED_HOSTS = ['train-booking.onrender.com','127.0.0.1','localhost']
 
 
 # Application definition
