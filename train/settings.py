@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a6#mwb1(wh5@+i#q*f(-m*@(!_6ctes_j9x#!)%0jp$9%7c7*_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['train-booking.onrender.com','127.0.0.1','localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,20 +75,20 @@ WSGI_APPLICATION = 'train.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'TrainManagement',
         'USER': 'root',
         'PASSWORD': '4YmfBTMu',
-        'HOST': '127.0.0.1',  # Use IP address instead of 'localhost'
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
+
 '''
 import os
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -99,6 +99,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+'''
 
 
 # Password validation
