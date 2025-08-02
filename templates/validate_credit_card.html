@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style6.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div id="detbox">
+        <form action="#"  method="POST"> {% csrf_token %}
+            <div id="card_number">
+                Card No : 
+                <label for="card_number">
+                    <input type="number" id="card_number" name="card_number" placeholder="Enter  No">
+                </label>
+            </div>
+            <div id="acctype">
+                Account type : 
+                <select name="acctype" id="acctpye" placeholder="Select account type">
+                    <option value="Current">Current</option>
+                    <option value="Savings">Savings</option>
+                </select>
+            </div>
+            <div id="cvv">
+                Enter CVV : 
+                <label for="cvv">
+                    <input type="password" id="cvv" name="cvv" placeholder="Enter CVV">
+                </label>
+            </div>
+            <button type="submit" id="pay-btn">Pay</button>
+        </form>
+    </div>    
+</body>
+</html>

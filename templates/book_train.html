@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style5.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+        <h1>TRAIN LIST</h1>
+    </div>
+    {% if train_data %}
+    <div id="maindiv">
+
+        {% for train_data in train_data %}
+        <div>
+            Train : {{train_data.train.Tname}}
+            <br>
+            From {{train_data.train.source}} to {{train_data.train.destination}}
+            <br>
+            Cost per Seat : {{train_data.cost_per_seat}}
+            <br>
+            Total amount payable : {{train_data.total_cost}}
+            <br>
+            Seat class : {{train_data.seat_class}}
+            <br>
+            <a href="{% url 'book_train' train_data.train.id train_data.seat_class train_data.no_of_seats %}">Book Ticket</a>
+        </div>
+        {% endfor %}
+
+    {% endif %}
+</body>
+</html>

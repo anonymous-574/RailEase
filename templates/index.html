@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="/login_user" target="_main" id="login">Login</a>
+        <a href="/register_user" target="_main" id="reg">Register</a>
+        <a href="/train_list" target="_main" id="book">Book tickets</a>
+    </div>
+    <br><br><br>
+    <div id="info">
+        <div id="welcome"></div>
+        <div id="introtext">
+            <p id="statement">Welcome to RailEase !! Your One-Stop Solution for Seamless Train Travel <br></p>
+            <br>
+            <p>RailEase is a user-friendly online platform designed to simplify the process of train ticket booking and management. With just a few clicks, you can easily search for trains, select your preferred class and date, and book your tickets.</p>
+            <br><br>
+            <p>Key Features of RailEase:</p>
+            <ul>
+                <li>User-Friendly Interface: A simple and intuitive interface makes the booking process hassle-free.</li>
+                <li>Real-Time Availability: Access to real-time train schedules and seat availability.</li>
+                <li>Secure Payment Gateway: Safe and secure payment options for hassle-free transactions.</li>
+                <li>PNR Status Tracking: Track the status of your booked tickets in real-time.</li>
+                <li>Easy Cancellation and Refunds: A smooth process for cancellations and refunds.</li>
+                <li>Personalized Preferences: Save your preferences for faster future bookings.</li>
+            </ul>
+            By digitizing the railway reservation system, RailEase aims to enhance the overall travel experience, reduce waiting times, and contribute to the growth of the digital India initiative.
+        </div>
+    </div>
+    <br><br>
+    <div id="footer">
+        <marquee>Register/Login to book tickets.</marquee>
+    </div>
+</body>
+</html>

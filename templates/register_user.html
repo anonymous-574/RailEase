@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+    <title>Login Page</title>
+</head>
+<body>
+    <div id="regbox">
+        <form action="#" method="POST"> {% csrf_token %}
+            <div id="mail">
+                <label for="email">
+                    <input type="text" id="email" name="email" placeholder="Enter email">
+                </label>
+            </div>
+            <div id="username">
+                <label for="Uname">
+                    <input type="text" id="Uname" name="Uname" placeholder="Create username">
+                </label>
+            </div>
+            <div id="pass">
+                <label for="password">
+                    <input type="password" id="password" name="password" placeholder="Create password">
+                </label>
+            </div>
+            <div id="confpass">
+                <label for="confirm_password">
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-Enter password">
+                </label>
+            </div>
+            <div id="phone">
+                <label for="phone_no">
+                    <input type="text" id="phone_no" name="phone_no" placeholder="Enter phone number">
+                </label>
+            </div>
+            <div id="add">
+                <label for="address">
+                    <input type="text" id="address" name="address" placeholder="Enter address">
+                </label>
+            </div>
+            <button type="submit" id="reg-btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>

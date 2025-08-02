@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <title>Login Page</title>
+</head>
+<body>
+    <div id="logbox">
+        <form action="#" method="POST">{% csrf_token %}
+            <div id="uname">
+                <label for="username">
+                    <input type="text" placeholder="Enter Username" name="username">
+                </label>
+            </div>
+            <br>
+            <div id="pass">
+                <label for="password">
+                    <input type="password" placeholder="Enter Password" name="password">
+                </label>
+            </div>
+            <br><br><br>
+            <button type="submit" id="login-btn">Login</button>
+            <br><br><br>
+            <div id="submit">
+                <p>Don't have an account?</p>
+                <a href="/register_user" target="_main" id="reg">Click here to register</a>
+            </div>
+            <br>
+        </form>
+    </div>
+</body>
+</html>
